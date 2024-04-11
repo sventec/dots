@@ -1,0 +1,51 @@
+# OMZ plugins
+ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+# ohmyzsh/ohmyzsh path:plugins/magic-enter
+ohmyzsh/ohmyzsh path:plugins/bgnotify
+ohmyzsh/ohmyzsh path:plugins/archlinux
+ohmyzsh/ohmyzsh path:plugins/python
+# ohmyzsh/ohmyzsh path:plugins/poetry
+
+# Zephyr
+# https://github.com/mattmc3/zephyr/blob/main/plugins/directory/directory.plugin.zsh
+# mattmc3/zephyr path:plugins/directory
+mattmc3/zephyr path:plugins/environment
+# mattmc3/zephyr path:plugins/terminal  # no longer exists
+mattmc3/zephyr path:plugins/editor
+mattmc3/zephyr path:plugins/directory
+mattmc3/zephyr path:plugins/color
+# mattmc3/zephyr path:plugins/confd
+
+# zsh-utils
+belak/zsh-utils path:utility
+belak/zsh-utils path:history
+## belak/zsh-utils path:prompt
+
+# prompt plugins
+romkatv/powerlevel10k
+
+# general plugins
+# agkozak/zsh-z
+
+# completion plugins
+zsh-users/zsh-completions
+ohmyzsh/ohmyzsh path:plugins/gitfast
+belak/zsh-utils path:completion
+# mattmc3/zephyr path:plugins/completion
+# ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/git  # loaded after compdef
+
+jeffreytse/zsh-vi-mode
+
+# deferred plugins
+# djui/alias-tips kind:defer
+MichaelAquilina/zsh-you-should-use kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
+# zsh-users/zsh-history-substring-search kind:defer
+
+# Code stats, set environment variable:
+# CODESTATS_API_KEY with .zshenv
+https://gitlab.com/code-stats/code-stats-zsh
+
+# vim: ft=zsh sw=2 ts=2 et
