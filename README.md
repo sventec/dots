@@ -1,21 +1,25 @@
 # Public dotfiles
 
-Public mirror of select configurations from my personal dotfiles.
+Public mirror of select (stable) configs from my personal dotfiles.
 
-## Available configurations
+## Available configs
 
 ### Neovim
 
-For my Neovim config, see [this repo](https://github.com/sventec/nvim).
+For my Neovim config, see [this dedicated repo](https://github.com/sventec/nvim).
 
 ### Ruff
 
 WIP example description of config, sample screenshots, installation, usage, etc.
 
+### Others
+
+- Terminal emulator: [kitty](./kitty/kitty.conf) ([homepage](https://sw.kovidgoyal.net/kitty/))
+
 ## TODO
 
 - Add dotfiles for
-  - [ ] kitty
+  - [x] kitty
   - [ ] qtile
   - [ ] zsh
     - [ ] p10k
