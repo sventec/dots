@@ -10,7 +10,12 @@ For my Neovim config, see [this dedicated repo](https://github.com/sventec/nvim)
 
 ### Ruff
 
-WIP example description of config, sample screenshots, installation, usage, etc.
+Ever-changing default configuration for [ruff](https://docs.astral.sh/ruff/).
+If there are no project-specific config sections for ruff, it will fall back to
+`~/.config/ruff/pyproject.toml`, thus the existence of this file. The version
+included here is **very** verbose, you will likely not want to
+use it as-is. Instead, use it as a baseline to help determine which rules are
+helpful, and which you feel are superfluous.
 
 ### Others
 
@@ -26,4 +31,4 @@ WIP example description of config, sample screenshots, installation, usage, etc.
     - [ ] .zshrc
     - [ ] antidote zsh_plugins.txt
     - [ ] example .zshenv?
-  - [ ] ruff
+  - [x] ruff

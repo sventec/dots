@@ -1,0 +1,51 @@
+# ruff will use this config if there are no project configs present to override it
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+# E, W: pycodestyle (Error, Warn); F: Pyflakes; B: flake8-bugbear; PL: Pylint;
+# RUF: ruff-specific; C4: flake8-comprehensions; A: flake8-builtins; D: pydocstyle;
+# I: isort; UP: pyupgrade; PIE: flake8-pie (misc. lints); ICN flake8-import-conventions
+# select = ["E", "W", "F", "B", "PL", "RUF", "C4", "A", "D", "I", "UP", "PIE", "ICN"]
+select = ["ALL"]
+
+# https://beta.ruff.rs/docs/rules
+# extend-ignore = ["D1", "UP015", "E501"]
+
+# extended ignore when using select = ["ALL"]:
+extend-ignore = [
+  "D1",     # D1** - Missing docstring in ... (public module, class, __init__, etc.)
+  "UP015",  # UP015 - Unnecessary open mode parameters (open("file", "r"))
+  "E501",   # E501 - Line too long - rationale: formatter will make best effort to fix, otherwise it's OK to leave
+  "T201",   # T201 - `print` found
+  "ERA",    # ERA - Commented out code (eradicate)
+  "ANN101", # ANN101 - Missing type annotation for `self` - deprecated
+  "S101",   # S101 - Disallow usage of assert
+  "TD002",  # TD002 - Missing author in TODO comment
+  "TD003",  # TD003 - Missing issue link following TODO comment
+]
+# extended ignore when using select = ["ALL"], _for consideration_:
+# PTH - Use pathlib instead of os, builtins, etc - https://docs.astral.sh/ruff/rules/#flake8-use-pathlib-pth
+
+[tool.ruff.extend-per-file-ignores]
+"tests/**/*.py" = [
+  "S101", # disallow assert
+  "ARG",  # unused args - used in fixtures
+  "FBT",  # booleans as positional args
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.flake8-annotations]
+# Suppress ANN200-level lints for functions returning None (implicitly or explicitly)
+# https://docs.astral.sh/ruff/settings/#lint_flake8-annotations_suppress-none-returning
+suppress-none-returning = true
+# Suppress ANN* rules if entire definition is fully untyped
+ignore-fully-untyped = true
+
+# [tool.ruff.lint.isort]
+# required-imports = ["from __future__ import annotations"]
+# To replicate reorder_python_imports always splitting imports into separate lines
+# force-single-line = true
