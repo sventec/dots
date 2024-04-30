@@ -21,6 +21,7 @@ extend-ignore = [
   "T201",   # T201 - `print` found
   "ERA",    # ERA - Commented out code (eradicate)
   "ANN101", # ANN101 - Missing type annotation for `self` - deprecated
+  "ANN102", # ANN102 - Missing type annotation for `cls` - deprecated
   "S101",   # S101 - Disallow usage of assert
   "TD002",  # TD002 - Missing author in TODO comment
   "TD003",  # TD003 - Missing issue link following TODO comment
