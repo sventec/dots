@@ -29,7 +29,7 @@ extend-ignore = [
 # extended ignore when using select = ["ALL"], _for consideration_:
 # PTH - Use pathlib instead of os, builtins, etc - https://docs.astral.sh/ruff/rules/#flake8-use-pathlib-pth
 
-[tool.ruff.extend-per-file-ignores]
+[tool.ruff.lint.extend-per-file-ignores]
 "tests/**/*.py" = [
   "S101", # disallow assert
   "ARG",  # unused args - used in fixtures
