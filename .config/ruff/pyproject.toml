@@ -1,7 +1,7 @@
 # ruff will use this config if there are no project configs present to override it
 [tool.ruff]
 line-length = 120
-target-version = "py311"
+# target-version = "py311" # this is detected if not explicitly set
 
 [tool.ruff.lint]
 # E, W: pycodestyle (Error, Warn); F: Pyflakes; B: flake8-bugbear; PL: Pylint;
