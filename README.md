@@ -29,7 +29,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### Others
 
-- Terminal emulator: [kitty](./kitty/kitty.conf) ([homepage](https://sw.kovidgoyal.net/kitty/))
+- Terminal emulator: [kitty](./.config/kitty/kitty.conf) ([homepage](https://sw.kovidgoyal.net/kitty/))
+- Git client: [lazygit](./.config/lazygit/config.yml) ([homepage](https://github.com/jesseduffield/lazygit))
 
 ## TODO
 
@@ -43,4 +44,5 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     - [ ] example .zshenv?
   - [x] ruff
   - [x] tmux
+  - [x] lazygit
   - [ ] zellij(?)

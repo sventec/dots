@@ -1,0 +1,16 @@
+customCommands:
+  - key: "C"
+    command: "git cz c"
+    description: "Commit with commitizen"
+    context: "files"
+    loadingText: "Opening commitizen commit tool"
+    subprocess: true
+  - key: "<c-p>"
+    command: "git remote prune {{.SelectedRemote.Name}}"
+    context: "remotes"
+    loadingText: "Pruning..."
+    description: "Prune deleted remote branches"
+os:
+  editPreset: nvim-remote
+gui:
+  nerdFontsVersion: "3"
