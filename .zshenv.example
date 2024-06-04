@@ -1,0 +1,2 @@
+export CODESTATS_API_KEY="api key here"
+export CODESTATS_USERNAME="username here"
