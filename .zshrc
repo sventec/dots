@@ -76,6 +76,7 @@ alias py="python3"
 alias pdmvenv='eval "$(pdm venv activate)"'
 alias activate='. .venv/bin/activate'  # `deactivate` built-in
 alias uvfreeze="uv pip freeze | uv pip compile - -o requirements.txt"
+alias da="deactivate"
 
 # shortcuts with fill/completion
 alias se='nvim $(fzf --reverse --height 40%)'

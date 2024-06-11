@@ -37,11 +37,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 - Add dotfiles for
   - [x] kitty
   - [ ] qtile
-  - [ ] zsh
-    - [ ] p10k
-    - [ ] .zshrc
-    - [ ] antidote zsh_plugins.txt
-    - [ ] example .zshenv?
+  - [x] zsh
+    - [x] p10k
+    - [x] .zshrc
+    - [x] antidote zsh_plugins.txt
+    - [x] example .zshenv?
   - [x] ruff
   - [x] tmux
   - [x] lazygit
