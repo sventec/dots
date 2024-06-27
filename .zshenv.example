@@ -1,2 +1,6 @@
+# optionally used by neovim and zsh (and potentially other codestats integrations)
 export CODESTATS_API_KEY="api key here"
 export CODESTATS_USERNAME="username here"
+
+# used by qtile weather widget
+export WTTR_LOCATION="location name, see https://wttr.in/:help"

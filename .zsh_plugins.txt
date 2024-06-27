@@ -1,3 +1,14 @@
+# Zephyr
+# https://github.com/mattmc3/zephyr/blob/main/plugins/directory/directory.plugin.zsh
+mattmc3/zephyr path:plugins/completion
+# mattmc3/zephyr path:plugins/directory
+mattmc3/zephyr path:plugins/environment
+# mattmc3/zephyr path:plugins/terminal  # no longer exists
+mattmc3/zephyr path:plugins/editor
+mattmc3/zephyr path:plugins/directory
+mattmc3/zephyr path:plugins/color
+# mattmc3/zephyr path:plugins/confd
+
 # OMZ plugins
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
 # ohmyzsh/ohmyzsh path:plugins/magic-enter
@@ -6,15 +17,6 @@ ohmyzsh/ohmyzsh path:plugins/archlinux
 ohmyzsh/ohmyzsh path:plugins/python
 # ohmyzsh/ohmyzsh path:plugins/poetry
 
-# Zephyr
-# https://github.com/mattmc3/zephyr/blob/main/plugins/directory/directory.plugin.zsh
-# mattmc3/zephyr path:plugins/directory
-mattmc3/zephyr path:plugins/environment
-# mattmc3/zephyr path:plugins/terminal  # no longer exists
-mattmc3/zephyr path:plugins/editor
-mattmc3/zephyr path:plugins/directory
-mattmc3/zephyr path:plugins/color
-# mattmc3/zephyr path:plugins/confd
 
 # zsh-utils
 belak/zsh-utils path:utility
@@ -28,14 +30,20 @@ romkatv/powerlevel10k
 # agkozak/zsh-z
 
 # completion plugins
-zsh-users/zsh-completions
+zsh-users/zsh-completions path:src kind:fpath
 ohmyzsh/ohmyzsh path:plugins/gitfast
-belak/zsh-utils path:completion
-# mattmc3/zephyr path:plugins/completion
-# ohmyzsh/ohmyzsh path:plugins/git
-ohmyzsh/ohmyzsh path:plugins/git  # loaded after compdef
+# TODO: troubleshoot missing descriptions in terraform autocomplete
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/terraform/_terraform
+ohmyzsh/ohmyzsh path:plugins/terraform
+ohmyzsh/ohmyzsh path:plugins/git
 
 jeffreytse/zsh-vi-mode
+
+# utilities
+romkatv/zsh-bench kind:path
+
+# load after populating fpath with other completion plugins
+belak/zsh-utils path:completion
 
 # deferred plugins
 # djui/alias-tips kind:defer
