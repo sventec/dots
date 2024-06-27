@@ -102,9 +102,9 @@ keys = [
         #  ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
         # ([], "XF86MonBrightnessUp", lazy.spawn(f"{homedir}/scripts/brightnessControl.sh up")),
         ([], "XF86MonBrightnessUp", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh up"))),
-        ([], "XF86MonBrightnessDown", lazy.spawn(Options.paths.qtile / "scripts/brightnessControl.sh down")),
-        (["shift"], "XF86MonBrightnessUp", lazy.spawn(Options.paths.qtile / "scripts/brightnessControl.sh sup")),
-        (["shift"], "XF86MonBrightnessDown", lazy.spawn(Options.paths.qtile / "scripts/brightnessControl.sh sdown")),
+        ([], "XF86MonBrightnessDown", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh down"))),
+        (["shift"], "XF86MonBrightnessUp", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh sup"))),
+        (["shift"], "XF86MonBrightnessDown", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh sdown"))),
         ([], "XF86KbdBrightnessUp", lazy.spawn("brightnessctl --device='tpacpi::kbd_backlight' set +10%")),
         ([], "XF86KbdBrightnessDown", lazy.spawn("brightnessctl --device='tpacpi::kbd_backlight' set 10%-")),
     ]
