@@ -6,6 +6,7 @@
 
 # ruff: noqa: F401
 import subprocess
+from pathlib import Path
 
 from libqtile import hook, qtile
 
@@ -16,7 +17,6 @@ from settings.layouts import floating_layout as _floating_layout
 from settings.layouts import layouts as _layouts
 from settings.mouse import mouse as _mouse
 from settings.options import Options  # import global options for use in config
-from settings.path import qtile_path as _qtile_path
 from settings.screens import screens as _screens
 from settings.widgets import extension_defaults as _extension_defaults
 from settings.widgets import widget_defaults as _widget_defaults
@@ -40,6 +40,8 @@ def autostart():
         subprocess.Popen([Options.paths.qtile / "autostart-wayland.sh"])  # noqa: S603
 
 
+# qtile config values
+# NOTE: qtile retrieves these values from the global namespace
 main = None
 dgroups_key_binder = None
 dgroups_app_rules = []
@@ -50,6 +52,8 @@ auto_fullscreen = True
 focus_on_window_activation = "urgent"
 wmname = "LG3D"
 
+qtile_path = str(Options.paths.qtile)
+
 # import configs from submodules into global namespace
 groups = _groups
 keys = _keys
@@ -57,7 +61,6 @@ mod = _mod
 floating_layout = _floating_layout
 layouts = _layouts
 mouse = _mouse
-qtile_path = _qtile_path
 screens = _screens
 extension_defaults = _extension_defaults
 widget_defaults = _widget_defaults

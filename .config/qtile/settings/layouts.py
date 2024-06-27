@@ -6,7 +6,9 @@
 from libqtile import layout
 from libqtile.config import Match
 
-from .theme import colors
+from settings.options import Options
+
+colors = Options.theme.get_theme()
 
 layout_conf = {
     "border_focus": colors["focus"][0],

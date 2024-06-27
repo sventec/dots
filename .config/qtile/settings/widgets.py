@@ -10,9 +10,10 @@ import os
 
 from libqtile import qtile, widget
 
-from .theme import colors
+from settings.options import Options
 
 BASE_FONTSIZE = 14
+colors = Options.theme.get_theme()
 
 
 def base(fg="text", bg="dark"):

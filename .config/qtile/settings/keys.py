@@ -84,8 +84,7 @@ keys = [
         # ([mod, "shift"], "x", lazy.spawn("betterlockscreen -l blur")),
         ([mod, "shift"], "x", lazy.spawn("xset s activate")),
         # Lock screen & turn screen off (script)
-        ([mod, "control"], "x", lazy.spawn([str(Options.paths.qtile / "screenoff.sh")])),
-        # ([mod, "control"], "x", lazy.spawn("sleep 1;xset dpms force off")),
+        ([mod, "control"], "x", lazy.spawn(str(Options.paths.qtile / "scripts/screenoff.sh"))),
         # Show power menu (rofi-power-menu)
         ([mod], "x", lazy.spawn(str(Options.paths.rofi_scripts / "powermenu_t1"))),
         # ------------ Hardware Configs ------------

@@ -56,22 +56,23 @@ See the bottom of [keys.py](settings/keys.py) for an example of this.
 
 ## Basic configueration
 
-**WIP**
+Qtile is configured via variables in the global namespace, which are checked by executing `config.py`. See the qtile
+docs for specifics on this.
 
-TODO: add basic configuration info after refactor
+The abstractions built in this configuration use options set in [`settings/options.py`](settings/options.py).
+Configuration for other aspects of qtile are in the files described [below](#config-structure).
 
 ### Theme
 
-...
+Create a [theme](themes/README.md), or choose one of the available themes in `themes/`.
+Set the `Options.theme` property in [`settings/options.py`](settings/options.py) to the desired theme name,
+which is the theme's filename without `.json`. See the default value for an example.
+
+This theme controls the colors for the status bar, window borders, etc.
 
 ### Hardware-specific
 
 ...
-
-## Theme
-
-Create a [theme](themes/README.md), or choose one of the available themes, and set the filename (without `.json`) in [config.json](config.json).
-This will update the colors for the statusbar, window borders, etc.
 
 ## Config Structure
 
@@ -81,7 +82,7 @@ Although the config file names are relatively simple, short descriptions of each
 - `keys.py`: Keybinds for Qtile are set here. Key chords are also supported, see the existing config for examples.
 - `layouts.py`: Defines which window layouts are available, comment/uncomment layouts to disable/enable.
 - `mouse.py`: Enables some basic mouse support. Not much to change here.
-- `path.py`: Small utility file to expose the config path. Not much to change here.
+- `options.py`: Utility module used to centrally define options used in other config files, like paths, or the default terminal.
 - `screens.py`: Defines the screens available to Qtile. Dynamically finds screens on X, screens must be manually configured here if using Wayland.
 - `theme.py`: Utility file to load themes from `themes/*.json`. Don't set the theme in this file, that's done in `config.json`.
 - `widgets.py`: Configuration for the builtin statusbar widgets. Some editing likely required here (network adapter name, OpenWeather API key).
