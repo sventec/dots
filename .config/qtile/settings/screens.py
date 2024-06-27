@@ -5,13 +5,11 @@
 
 import subprocess
 
-from libqtile import bar
-from libqtile import qtile
+from libqtile import bar, qtile
 from libqtile.config import Screen
 from libqtile.log_utils import logger
 
-from .widgets import primary_widgets
-from .widgets import secondary_widgets
+from .widgets import primary_widgets, secondary_widgets
 
 
 def status_bar(widgets):
@@ -30,6 +28,7 @@ if qtile.core.name == "x11":
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
+        check=False,
     )
 
     if command.returncode != 0:

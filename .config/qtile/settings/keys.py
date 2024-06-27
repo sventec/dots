@@ -11,6 +11,8 @@ from settings.options import Options
 
 # shorter mod since it's in every bind
 mod = Options.keys.mod
+# other aliases
+brightness_script = str(Options.paths.qtile / "scripts/brightnessControl.sh")
 
 keys = [
     Key(key[0], key[1], *key[2:])
@@ -89,22 +91,13 @@ keys = [
         # ------------ Hardware Configs ------------
         # Volume
         # replaced by bindings from pa-applet
-        # ([], "XF86AudioLowerVolume",
-        #     lazy.spawn(f"{homedir}/scripts/volumeControl.sh down")),
-        #  #  lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
-        # ([], "XF86AudioRaiseVolume",
-        #     lazy.spawn(f"{homedir}/scripts/volumeControl.sh up")),
-        #  #  lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
-        # ([], "XF86AudioMute",
-        #  lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
         # Brightness
         #  ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
         #  ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
-        # ([], "XF86MonBrightnessUp", lazy.spawn(f"{homedir}/scripts/brightnessControl.sh up")),
-        ([], "XF86MonBrightnessUp", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh up"))),
-        ([], "XF86MonBrightnessDown", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh down"))),
-        (["shift"], "XF86MonBrightnessUp", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh sup"))),
-        (["shift"], "XF86MonBrightnessDown", lazy.spawn(str(Options.paths.qtile / "scripts/brightnessControl.sh sdown"))),
+        ([], "XF86MonBrightnessUp", lazy.spawn(brightness_script + " up")),
+        ([], "XF86MonBrightnessDown", lazy.spawn(brightness_script + " down")),
+        (["shift"], "XF86MonBrightnessUp", lazy.spawn(brightness_script + " sup")),
+        (["shift"], "XF86MonBrightnessDown", lazy.spawn(brightness_script + " sdown")),
         ([], "XF86KbdBrightnessUp", lazy.spawn("brightnessctl --device='tpacpi::kbd_backlight' set +10%")),
         ([], "XF86KbdBrightnessDown", lazy.spawn("brightnessctl --device='tpacpi::kbd_backlight' set 10%-")),
     ]

@@ -13,4 +13,6 @@ reportUnusedImport = false
 [tool.ruff]
 # extend = "~/.config/ruff/pyproject.toml"  # Don't override system-wide default ruff config
 extend = "../ruff/pyproject.toml"           # For this project, instead use the one already in the repo
+
+[tool.ruff.lint]
 extend-ignore = ["INP001"]

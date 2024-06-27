@@ -13,7 +13,6 @@ class Paths:
     qtile = home / Path(".config/qtile")
     rofi_scripts = home / Path(".config/rofi/scripts")
 
-
     # @override
     # def __getattribute__(self, name: str, /) -> str:
     #     attr = dataclass.__getattribute__(self, name)
@@ -38,4 +37,3 @@ class KeyOptions:
 class Options:
     keys = KeyOptions()
     paths = Paths()
-
