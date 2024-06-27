@@ -3,6 +3,11 @@
 line-length = 120
 # target-version = "py311" # this is detected if not explicitly set
 
+[tool.ruff.format]
+# format fenced Python code examples inside docstrings
+docstring-code-format = true
+docstring-code-line-length = 80
+
 [tool.ruff.lint]
 # E, W: pycodestyle (Error, Warn); F: Pyflakes; B: flake8-bugbear; PL: Pylint;
 # RUF: ruff-specific; C4: flake8-comprehensions; A: flake8-builtins; D: pydocstyle;
@@ -26,6 +31,9 @@ extend-ignore = [
   "TD002",  # TD002 - Missing author in TODO comment
   "TD003",  # TD003 - Missing issue link following TODO comment
   "FIX",    # FIX - Warnings to resolve FIXME, TODO, HACK, etc. I prefer to manage these in Neovim (e.g. with Trouble)
+  "COM812", # COM812 - Missing trailing comma. Can cause formatter conflicts.
+  "COM819", # COM819 - Prohibited (unnecessary) trailing comma. Can cause formatter conflicts.
+  "ISC001", # ISC001 - Implicitly concatenated strings on single line. Can cause formatter conflicts.
 ]
 # extended ignore when using select = ["ALL"], _for consideration_:
 # PTH - Use pathlib instead of os, builtins, etc - https://docs.astral.sh/ruff/rules/#flake8-use-pathlib-pth
@@ -50,4 +58,5 @@ ignore-fully-untyped = true
 # [tool.ruff.lint.isort]
 # required-imports = ["from __future__ import annotations"]
 # To replicate reorder_python_imports always splitting imports into separate lines
+# WARN: this is incompatible with the ruff formatter's treatment of import statements
 # force-single-line = true
