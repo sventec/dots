@@ -123,6 +123,7 @@ common_widgets = [
     powerline('light', 'dark'),
     #  icon(bg='dark', text='墳 ', fg='light'),
     # widget.Volume(**base(bg='dark', fg='light'), padding=2),
+    widget.PulseVolume(**base(fg='light'), step=5),
 ]
 
 # Any primary statusbar-only widgets can be added either before or after the common widgets are added

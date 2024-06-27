@@ -4,8 +4,8 @@
 # Module for creation of keybinds
 
 from libqtile import qtile
-from libqtile.command import lazy
 from libqtile.config import Key, KeyChord
+from libqtile.lazy import lazy
 
 from settings.options import Options
 

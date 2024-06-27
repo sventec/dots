@@ -3,9 +3,10 @@
 
 # Module for managing groups/workspaces
 
-from libqtile.config import Key, Group, ScratchPad, DropDown
-from libqtile.command import lazy
-from .keys import mod, keys
+from libqtile.config import DropDown, Group, Key, ScratchPad
+from libqtile.lazy import lazy
+
+from .keys import keys, mod
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 # Icons:

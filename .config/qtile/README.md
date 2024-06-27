@@ -25,6 +25,20 @@ The programs currently used are as follows:
 - `xss-lock`: Optional, used to provide lockscreen functionality.
 - `betterlockscreen`: Optional, used to provide lockscreen functionality.
 
+### Widget Prerequisites
+
+For all widgets enabled in this config by default, the following python packages are required:
+
+```plaintext
+iwlib
+pulsectl_asyncio
+```
+
+The `PulseVolume` widget is also responsible for handling volume keybinds, so these must be changed if the
+`pulsectl_asyncio` dependency is to be omitted.
+
+Additionally, the weather widget requires the `WTTR_LOCATION` environment variable to be set (e.g. in `~/.zshenv`).
+
 ### Optional Wayland Prerequisites
 
 For Wayland support, install the following (XWayland is optional):

@@ -20,8 +20,9 @@ nm-applet &
 # volumeicon &
 # (pa-applet also replaces volume controls in settings/keys.py)
 # sleep 2; pa-applet &
-pa-applet &
+# pa-applet &
 # volumeicon &
+# latest: control via qtile PulseVolume widget (requires python-pulsectl-asyncio)
 
 # set wallpaper
 # nitrogen --restore &

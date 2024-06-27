@@ -3,10 +3,10 @@
 
 # Module for mouse support
 
-from libqtile.config import Drag, Click
-from libqtile.command import lazy
-from .keys import mod
+from libqtile.config import Click, Drag
+from libqtile.lazy import lazy
 
+from .keys import mod
 
 mouse = [
     Drag(
