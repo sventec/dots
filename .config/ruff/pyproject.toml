@@ -14,26 +14,26 @@ docstring-code-line-length = 80
 # I: isort; UP: pyupgrade; PIE: flake8-pie (misc. lints); ICN flake8-import-conventions
 # select = ["E", "W", "F", "B", "PL", "RUF", "C4", "A", "D", "I", "UP", "PIE", "ICN"]
 select = ["ALL"]
+preview = true   # enable preview rules (in testing)
 
 # https://beta.ruff.rs/docs/rules
 # extend-ignore = ["D1", "UP015", "E501"]
 
 # extended ignore when using select = ["ALL"]:
 extend-ignore = [
-  "D1",     # D1** - Missing docstring in ... (public module, class, __init__, etc.)
-  "UP015",  # UP015 - Unnecessary open mode parameters (open("file", "r"))
-  "E501",   # E501 - Line too long - rationale: formatter will make best effort to fix, otherwise it's OK to leave
-  "T201",   # T201 - `print` found
-  "ERA",    # ERA - Commented out code (eradicate)
-  "ANN101", # ANN101 - Missing type annotation for `self` - deprecated
-  "ANN102", # ANN102 - Missing type annotation for `cls` - deprecated
-  "S101",   # S101 - Disallow usage of assert
-  "TD002",  # TD002 - Missing author in TODO comment
-  "TD003",  # TD003 - Missing issue link following TODO comment
-  "FIX",    # FIX - Warnings to resolve FIXME, TODO, HACK, etc. I prefer to manage these in Neovim (e.g. with Trouble)
+  "D1",     # D1**   - Missing docstring in ... (public module, class, __init__, etc.)
+  "UP015",  # UP015  - Unnecessary open mode parameters (open("file", "r"))
+  "E501",   # E501   - Line too long - rationale: formatter will make best effort to fix, otherwise it's OK to leave
+  "T201",   # T201   - `print` found
+  "ERA",    # ERA    - Commented out code (eradicate)
+  "S101",   # S101   - Disallow usage of assert
+  "TD002",  # TD002  - Missing author in TODO comment
+  "TD003",  # TD003  - Missing issue link following TODO comment
+  "FIX",    # FIX    - Warnings to resolve FIXME, TODO, HACK, etc. I prefer to manage these in Neovim (e.g. with Trouble)
   "COM812", # COM812 - Missing trailing comma. Can cause formatter conflicts.
   "COM819", # COM819 - Prohibited (unnecessary) trailing comma. Can cause formatter conflicts.
   "ISC001", # ISC001 - Implicitly concatenated strings on single line. Can cause formatter conflicts.
+  "CPY",    # CPY    - Copyright checks (missing copyright at top of file). Preview mode only.
 ]
 # extended ignore when using select = ["ALL"], _for consideration_:
 # PTH - Use pathlib instead of os, builtins, etc - https://docs.astral.sh/ruff/rules/#flake8-use-pathlib-pth
