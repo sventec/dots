@@ -18,5 +18,10 @@ gui:
   # Whether to show the divergence from the base branch in the branches view.
   showDivergenceFromBaseBranch: arrowAndNumber # or 'onlyArrow', default 'none'
   # statusPanelView: allBranchesLog # default 'dashboard'
-# git:
-#   parseEmoji: true # render emoji strings in commit messages, e.g. `:sparkles:` -> ✨️
+git:
+  # parseEmoji: true # render emoji strings in commit messages, e.g. `:sparkles:` -> ✨️
+  paging:
+    # use either externalDiffCommand OR pager
+    externalDiffCommand: difft --color=always # --display=inline
+    # colorArg: always
+    # pager: diff-so-fancy
