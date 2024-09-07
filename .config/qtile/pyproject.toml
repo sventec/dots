@@ -1,4 +1,4 @@
-[tool.pyright]
+[tool.basedpyright]
 pythonVersion = "3.11"
 pythonPlatform = "Linux"
 
@@ -8,6 +8,7 @@ executionEnvironments = [
   ] },
 ]
 
+typeCheckingMode = "standard"
 reportUnusedImport = false
 
 [tool.ruff]

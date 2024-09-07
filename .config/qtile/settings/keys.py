@@ -88,8 +88,7 @@ keys = [
         # Show power menu (rofi-power-menu)
         ([mod], "x", lazy.spawn(str(Options.paths.rofi_scripts / "powermenu_t1"))),
         # ------------ Hardware Configs ------------
-        # Volume
-        # replaced by bindings from pa-applet
+        # Volume handled by PulseVolume widget
         # Brightness
         #  ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
         #  ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),

@@ -6,11 +6,20 @@
 # Optional: Use of OpenWeather widget requires an OpenWeather API key as environment variable OPENWEATHER_API_KEY
 #           This environment variable can be set in e.g. .zshenv
 
+import importlib.util
 import os
 
-from libqtile import qtile, widget
+from libqtile import qtile
+# from libqtile import qtile, widget
 
 from settings.options import Options
+
+# INFO: try to use qtile_extras, but have fallbacks if not present
+# has_extras = importlib.util.find_spec("qtile_extras") is not None
+# if has_extras:
+#     from qtile_extras import widget as widget_extras
+# from qtile_extras import widget
+from libqtile import widget
 
 BASE_FONTSIZE = 14
 colors = Options.theme.get_theme()
@@ -98,7 +107,7 @@ common_widgets = [
     #  icon(fg='color3', text='摒 '),
     widget.OpenWeather(
         **base(fg="color3"),
-        cityid=5234372,
+        cityid=int(os.getenv("OPENWEATHER_CITYID", "5234372")),
         app_key=os.getenv("OPENWEATHER_API_KEY"),
         metric=False,
         format="{main_temp}°{units_temperature} {humidity}% {weather_details}",
@@ -114,6 +123,9 @@ common_widgets = [
     powerline("light", "dark"),
     #  icon(bg='dark', text='墳 ', fg='light'),
     # widget.Volume(**base(bg='dark', fg='light'), padding=2),
+    # INFO: load qtile_extras version if package is installed, else standard version
+    # qtile_extras.widget.PulseVolume benefit: middle-click to select default sink
+    # (widget_extras if has_extras else widget).PulseVolume(**base(fg="light"), step=5),
     widget.PulseVolume(**base(fg="light"), step=5),
 ]
 
