@@ -4,3 +4,7 @@ export CODESTATS_USERNAME="username here"
 
 # used by qtile weather widget
 export WTTR_LOCATION="location name, see https://wttr.in/:help"
+
+# used by qtile Openweather widget
+export OPENWEATHER_API_KEY="add api key here, see qtile widget docs"
+export OPENWEATHER_CITYID="1234567"

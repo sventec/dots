@@ -44,15 +44,15 @@ export FILE="thunar"
 # === aliases ===
 # For a full list of active aliases, run `alias`.
 
-# exa replacements for ls
-alias ls='exa --color=always --group-directories-first'
-alias lsl='exa -la --color=always --group-directories-first --icons'
-alias l='exa -la --color=always --group-directories-first --icons'
+# eza (exa fork) replacements for ls
+alias ls='eza --color=always --group-directories-first'
+alias lsl='eza -la --color=always --group-directories-first --icons'
+alias l='eza -la --color=always --group-directories-first --icons'
 alias lsd='lsd --group-dirs first --color always'
-alias lsla='exa --long --header --git --all'
-alias lsr='exa -lr --sort=mod --color=always'
-alias lsra='exa -lra --sort=mod --color=always'
-alias lstree='exa -T'
+alias lsla='eza --long --header --git --all'
+alias lsr='eza -lr --sort=mod --color=always'
+alias lsra='eza -lra --sort=mod --color=always'
+alias lstree='eza -T'
 
 # shortcuts
 alias cp='cp -v'
@@ -70,6 +70,8 @@ alias e="exit" # Shorter shell exiting
 alias v="nvim"
 alias za="zathura"
 alias copy="xsel -ib"
+alias rg="rg --hyperlink-format=kitty" # Open results in $EDITOR at matched line with `<C-P>y`
+alias s="kitten ssh" # Kitty SSH wrapper
 
 # python aliases
 alias py="python3"
@@ -196,6 +198,9 @@ function extract {
 # paths can be distro specific
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+# for ubuntu/debian-based:
+# source /usr/share/doc/fzf/examples/key-bindings.zsh
+# source /usr/share/doc/fzf/examples/completion.zsh
 
 # === tool setups ===
 
@@ -210,7 +215,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # ssh-agent type functionality for remembering ssh key password
 # requires `keychain`
-eval "$(keychain --noask -q --eval id_rsa)"
+eval "$(keychain --noask -q --agents ssh --eval id_rsa)"
 
 # pyenv (python version management)
 export PYENV_ROOT="$HOME/.pyenv"
