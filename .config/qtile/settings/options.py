@@ -32,7 +32,7 @@ class KeyOptions:
     # Options specific to the settings.keys settings submodule
     mod = "mod4"
     term = "kitty"
-    backup_term = "urxvt"
+    backup_term = "ghostty"
 
 
 class Theme:
