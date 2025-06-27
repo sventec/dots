@@ -1,7 +1,13 @@
 # ruff will use this config if there are no project configs present to override it
 [tool.ruff]
 line-length = 120
-# target-version = "py311" # this is detected if not explicitly set
+
+# target-version is set in this user-level config because:
+# https://docs.astral.sh/ruff/configuration/#inferring-the-python-version
+# "If we are using a user-level config..., the requires-python field in the first pyproject.toml
+# file found in an ancestor of the current working directory takes precedence over the
+# target-version in the user-level configuration."
+target-version = "py312"
 
 [tool.ruff.format]
 # format fenced Python code examples inside docstrings
